@@ -1,28 +1,22 @@
-| Supported Targets | ESP32 | ESP32-C2 | ESP32-C3 | ESP32-C6 | ESP32-H2 | ESP32-P4 | ESP32-S2 | ESP32-S3 |
-| ----------------- | ----- | -------- | -------- | -------- | -------- | -------- | -------- | -------- |
+| 支持的目标 | ESP32-S3 |
+| --------- | -------- |
 
-# _Sample project_
+# _示例项目_
 
-(See the README.md file in the upper level 'examples' directory for more information about examples.)
+（有关示例的更多信息，请参阅上级 'examples' 目录中的 README.md 文件。
 
-This is the simplest buildable example. The example is used by command `idf.py create-project`
-that copies the project to user specified path and set it's name. For more information follow the [docs page](https://docs.espressif.com/projects/esp-idf/en/latest/api-guides/build-system.html#start-a-new-project)
+这是最简单的可构建示例。该示例由命令使用，该命令将项目复制到用户指定的路径并设置其名称。有关更多信息，请访问文档页面[docs page](https://docs.espressif.com/projects/esp-idf/en/latest/api-guides/build-system.html#start-a-new-project)`idf.py create-project`
 
+## 如何使用示例
+我们鼓励用户使用该示例作为新项目的模板。 推荐的方法是按照 [docs 页面](https://docs.espressif.com/projects/esp-idf/en/latest/api-guides/build-system.html#start-a-new-project)的说明进行。
 
+## 示例文件夹内容
 
-## How to use example
-We encourage the users to use the example as a template for the new projects.
-A recommended way is to follow the instructions on a [docs page](https://docs.espressif.com/projects/esp-idf/en/latest/api-guides/build-system.html#start-a-new-project).
+项目 **sample_project** 包含一个 C 语言 [main.c](main/main.c) 的源文件。该文件位于文件夹 [main](main) 中。
 
-## Example folder contents
+ESP-IDF 项目是使用 CMake 构建的。项目生成配置包含在文件中，这些文件提供一组描述项目的源文件和目标的指令和说明 （可执行文件、库或两者）。`CMakeLists.txt`
 
-The project **sample_project** contains one source file in C language [main.c](main/main.c). The file is located in folder [main](main).
-
-ESP-IDF projects are built using CMake. The project build configuration is contained in `CMakeLists.txt`
-files that provide set of directives and instructions describing the project's source files and targets
-(executable, library, or both). 
-
-Below is short explanation of remaining files in the project folder.
+以下是 project 文件夹中剩余文件的简短说明。
 
 ```
 ├── CMakeLists.txt
@@ -31,5 +25,4 @@ Below is short explanation of remaining files in the project folder.
 │   └── main.c
 └── README.md                  This is the file you are currently reading
 ```
-Additionally, the sample project contains Makefile and component.mk files, used for the legacy Make based build system. 
-They are not used or needed when building with CMake and idf.py.
+此外，示例项目还包含 Makefile 和 component.mk 文件，用于基于 Make 的旧版构建系统。 使用 CMake 和 idf.py 进行构建时，不使用也不需要它们。
